@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Database Hotel NTB</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f7fb;
+    padding:30px;
+}
+
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+
+h1{
+    text-align:center;
+    color:#1d3557;
+}
+
+
+.filter-box{
+    display:flex;
+    gap:15px;
+    margin:25px 0;
+}
+
+
+input,select{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    width:100%;
+}
+
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+}
+
+
+th{
+    background:#1d3557;
+    color:white;
+    padding:12px;
+}
+
+
+td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+
+tr:hover{
+    background:#f1f5ff;
+}
+
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    display:flex;
+    gap:30px;
+}
+
+
+.card-item{
+    flex:1;
+    text-align:center;
+}
+
+
+.number{
+    font-size:30px;
+    font-weight:bold;
+    color:#1d3557;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+DATABASE HOTEL NTB
+</h1>
+
+
+<div class="card">
+
+<div class="card-item">
+<div>Total Hotel</div>
+<div class="number" id="totalHotel">0</div>
+</div>
+
+
+<div class="card-item">
+<div>Total Kamar</div>
+<div class="number" id="totalKamar">0</div>
+</div>
+
+
+<div class="card-item">
+<div>Wilayah</div>
+<div class="number" id="totalWilayah">0</div>
+</div>
+
+</div>
+
+
+
+<div class="filter-box">
+
+<input 
+type="text"
+id="search"
+placeholder="Cari nama hotel..."
+>
+
+
+<select id="wilayah">
+
+<option value="">
+Semua Wilayah
+</option>
+
+</select>
+
+
+</div>
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>No</th>
+<th>Nama Hotel</th>
+<th>Wilayah</th>
+<th>Jumlah Kamar</th>
+
+</tr>
+
+
+</thead>
+
+
+<tbody id="hotelData">
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+<script>
+
+
+let database=[];
+
+
+
+fetch("data.json")
+
+.then(response=>response.json())
+
+.then(data=>{
+
+database=data;
+
+tampilkanData(database);
+
+buatFilter(database);
+
+hitungData(database);
+
+});
+
+
+
+
+function tampilkanData(data){
+
+
+let html="";
+
+
+data.forEach((item,index)=>{
+
+
+html += `
+
+<tr>
+
+<td>${index+1}</td>
+
+<td>${item.hotel}</td>
+
+<td>${item.wilayah}</td>
+
+<td>${item.kamar}</td>
+
+
+</tr>
+
+`;
+
+
+});
+
+
+document.getElementById("hotelData").innerHTML=html;
+
+
+}
+
+
+
+
+function buatFilter(data){
+
+
+let wilayah=[];
+
+
+data.forEach(item=>{
+
+if(!wilayah.includes(item.wilayah)){
+wilayah.push(item.wilayah);
+}
+
+});
+
+
+let option="";
+
+wilayah.forEach(item=>{
+
+option +=`
+
+<option value="${item}">
+${item}
+</option>
+
+`;
+
+});
+
+
+document.getElementById("wilayah").innerHTML += option;
+
+
+}
+
+
+
+
+function hitungData(data){
+
+
+document.getElementById("totalHotel").innerHTML=data.length;
+
+
+
+let kamar=data.reduce(
+(total,item)=>total+item.kamar,
+0
+);
+
+
+document.getElementById("totalKamar").innerHTML=kamar;
+
+
+
+let wilayah=[...new Set(
+data.map(item=>item.wilayah)
+)];
+
+document.getElementById("totalWilayah").innerHTML=wilayah.length;
+
+
+}
+
+
+
+
+document.getElementById("search")
+.addEventListener("keyup",function(){
+
+
+filterData();
+
+
+});
+
+
+
+document.getElementById("wilayah")
+.addEventListener("change",function(){
+
+
+filterData();
+
+
+});
+
+
+
+
+function filterData(){
+
+
+let keyword=
+document.getElementById("search").value
+.toLowerCase();
+
+
+let area=
+document.getElementById("wilayah").value;
+
+
+
+let hasil=database.filter(item=>{
+
+
+return (
+
+item.hotel
+.toLowerCase()
+.includes(keyword)
+
+&&
+
+(area=="" || item.wilayah==area)
+
+);
+
+
+});
+
+
+tampilkanData(hasil);
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
