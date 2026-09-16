@@ -1,0 +1,197 @@
+[
+  {
+    "id_kabupaten": "KOTA-MATARAM",
+    "provinsi": "Nusa Tenggara Barat",
+    "kabupaten": "Kota Mataram",
+    "kecamatan": [
+      {"id":"MAT-AMP","nama":"Ampenan"},
+      {"id":"MAT-CAK","nama":"Cakranegara"},
+      {"id":"MAT-MTR","nama":"Mataram"},
+      {"id":"MAT-SAN","nama":"Sandubaya"},
+      {"id":"MAT-SEL","nama":"Selaparang"},
+      {"id":"MAT-SEK","nama":"Sekarbela"}
+    ]
+  },
+
+  {
+    "id_kabupaten": "LOMBOK-BARAT",
+    "provinsi": "Nusa Tenggara Barat",
+    "kabupaten": "Lombok Barat",
+    "kecamatan": [
+      {"id":"LBR-BTL","nama":"Batu Layar"},
+      {"id":"LBR-GER","nama":"Gerung"},
+      {"id":"LBR-GUN","nama":"Gunungsari"},
+      {"id":"LBR-KED","nama":"Kediri"},
+      {"id":"LBR-KUR","nama":"Kuripan"},
+      {"id":"LBR-LAB","nama":"Labuapi"},
+      {"id":"LBR-LEM","nama":"Lembar"},
+      {"id":"LBR-LIN","nama":"Lingsar"},
+      {"id":"LBR-NAR","nama":"Narmada"},
+      {"id":"LBR-SEK","nama":"Sekotong"}
+    ]
+  },
+
+  {
+    "id_kabupaten": "LOMBOK-TENGAH",
+    "provinsi": "Nusa Tenggara Barat",
+    "kabupaten": "Lombok Tengah",
+    "kecamatan": [
+      {"id":"LOT-BAT","nama":"Batukliang"},
+      {"id":"LOT-BTU","nama":"Batukliang Utara"},
+      {"id":"LOT-JAN","nama":"Janapria"},
+      {"id":"LOT-JON","nama":"Jonggat"},
+      {"id":"LOT-KOP","nama":"Kopang"},
+      {"id":"LOT-KUR","nama":"Kuta"},
+      {"id":"LOT-PRY","nama":"Praya"},
+      {"id":"LOT-PRB","nama":"Praya Barat"},
+      {"id":"LOT-PRBD","nama":"Praya Barat Daya"},
+      {"id":"LOT-PRT","nama":"Praya Tengah"},
+      {"id":"LOT-PRE","nama":"Praya Timur"},
+      {"id":"LOT-PUJ","nama":"Pujut"}
+    ]
+
+    ,
+{
+  "id_kabupaten": "LOMBOK-TIMUR",
+  "provinsi": "Nusa Tenggara Barat",
+  "kabupaten": "Lombok Timur",
+  "kecamatan": [
+    {"id":"LOTIM-AIK","nama":"Aikmel"},
+    {"id":"LOTIM-JER","nama":"Jerowaru"},
+    {"id":"LOTIM-KER","nama":"Keruak"},
+    {"id":"LOTIM-LBH","nama":"Labuhan Haji"},
+    {"id":"LOTIM-LEN","nama":"Lenek"},
+    {"id":"LOTIM-MAS","nama":"Masbagik"},
+    {"id":"LOTIM-MON","nama":"Montong Gading"},
+    {"id":"LOTIM-PRB","nama":"Pringgabaya"},
+    {"id":"LOTIM-PRS","nama":"Pringgasela"},
+    {"id":"LOTIM-SAK","nama":"Sakra"},
+    {"id":"LOTIM-SKB","nama":"Sakra Barat"},
+    {"id":"LOTIM-SKT","nama":"Sakra Timur"},
+    {"id":"LOTIM-SAM","nama":"Sambelia"},
+    {"id":"LOTIM-SEM","nama":"Sembalun"},
+    {"id":"LOTIM-SIK","nama":"Sikur"},
+    {"id":"LOTIM-SUE","nama":"Suela"},
+    {"id":"LOTIM-SUR","nama":"Suralaga"},
+    {"id":"LOTIM-TER","nama":"Terara"},
+    {"id":"LOTIM-WAN","nama":"Wanasaba"}
+  ]
+},
+
+{
+  "id_kabupaten": "LOMBOK-UTARA",
+  "provinsi": "Nusa Tenggara Barat",
+  "kabupaten": "Lombok Utara",
+  "kecamatan": [
+    {"id":"KLU-BAY","nama":"Bayan"},
+    {"id":"KLU-GAN","nama":"Gangga"},
+    {"id":"KLU-KAY","nama":"Kayangan"},
+    {"id":"KLU-PEM","nama":"Pemenang"},
+    {"id":"KLU-TAN","nama":"Tanjung"}
+  ]
+},
+
+{
+  "id_kabupaten": "SUMBAWA-BARAT",
+  "provinsi": "Nusa Tenggara Barat",
+  "kabupaten": "Sumbawa Barat",
+  "kecamatan": [
+    {"id":"KSB-BRA","nama":"Brang Ene"},
+    {"id":"KSB-BRR","nama":"Brang Rea"},
+    {"id":"KSB-JER","nama":"Jereweh"},
+    {"id":"KSB-MAL","nama":"Maluk"},
+    {"id":"KSB-POT","nama":"Poto Tano"},
+    {"id":"KSB-SET","nama":"Seteluk"},
+    {"id":"KSB-TAL","nama":"Taliwang"},
+    {"id":"KSB-SEK","nama":"Sekongkang"}
+  ]
+}
+  }
+]
+
+,
+{
+  "id_kabupaten": "SUMBAWA",
+  "provinsi": "Nusa Tenggara Barat",
+  "kabupaten": "Sumbawa",
+  "kecamatan": [
+    {"id":"SMB-ALA","nama":"Alas"},
+    {"id":"SMB-ALB","nama":"Alas Barat"},
+    {"id":"SMB-BAT","nama":"Batulanteh"},
+    {"id":"SMB-BUE","nama":"Buer"},
+    {"id":"SMB-EMP","nama":"Empang"},
+    {"id":"SMB-LAB","nama":"Labangka"},
+    {"id":"SMB-LBD","nama":"Labuhan Badas"},
+    {"id":"SMB-LAN","nama":"Lantung"},
+    {"id":"SMB-LAP","nama":"Lape"},
+    {"id":"SMB-LOP","nama":"Lopok"},
+    {"id":"SMB-LUN","nama":"Lunyuk"},
+    {"id":"SMB-MOH","nama":"Moyo Hilir"},
+    {"id":"SMB-MOHU","nama":"Moyo Hulu"},
+    {"id":"SMB-MOUT","nama":"Moyo Utara"},
+    {"id":"SMB-ORO","nama":"Orong Telu"},
+    {"id":"SMB-PLA","nama":"Plampang"},
+    {"id":"SMB-RHE","nama":"Rhee"},
+    {"id":"SMB-ROP","nama":"Ropang"},
+    {"id":"SMB-SUM","nama":"Sumbawa"},
+    {"id":"SMB-TAR","nama":"Tarano"},
+    {"id":"SMB-UNT","nama":"Unter Iwes"},
+    {"id":"SMB-UTN","nama":"Utan"}
+  ]
+},
+
+{
+  "id_kabupaten": "DOMPU",
+  "provinsi": "Nusa Tenggara Barat",
+  "kabupaten": "Dompu",
+  "kecamatan": [
+    {"id":"DOM-DOM","nama":"Dompu"},
+    {"id":"DOM-HUU","nama":"Hu'u"},
+    {"id":"DOM-KEM","nama":"Kempo"},
+    {"id":"DOM-KIL","nama":"Kilo"},
+    {"id":"DOM-MAN","nama":"Manggelewa"},
+    {"id":"DOM-PAJ","nama":"Pajo"},
+    {"id":"DOM-PEK","nama":"Pekat"},
+    {"id":"DOM-WOJ","nama":"Woja"}
+  ]
+},
+
+{
+  "id_kabupaten": "BIMA",
+  "provinsi": "Nusa Tenggara Barat",
+  "kabupaten": "Kabupaten Bima",
+  "kecamatan": [
+    {"id":"BIM-AMB","nama":"Ambalawi"},
+    {"id":"BIM-BEL","nama":"Belo"},
+    {"id":"BIM-BOL","nama":"Bolo"},
+    {"id":"BIM-DON","nama":"Donggo"},
+    {"id":"BIM-LAM","nama":"Lambitu"},
+    {"id":"BIM-LMB","nama":"Lambu"},
+    {"id":"BIM-LGD","nama":"Langgudu"},
+    {"id":"BIM-MAD","nama":"Madapangga"},
+    {"id":"BIM-MON","nama":"Monta"},
+    {"id":"BIM-PAL","nama":"Palibelo"},
+    {"id":"BIM-PAR","nama":"Parado"},
+    {"id":"BIM-SAN","nama":"Sanggar"},
+    {"id":"BIM-SAP","nama":"Sape"},
+    {"id":"BIM-SOR","nama":"Soromandi"},
+    {"id":"BIM-TAM","nama":"Tambora"},
+    {"id":"BIM-WAW","nama":"Wawo"},
+    {"id":"BIM-WER","nama":"Wera"},
+    {"id":"BIM-WOH","nama":"Woha"}
+  ]
+},
+
+{
+  "id_kabupaten": "KOTA-BIMA",
+  "provinsi": "Nusa Tenggara Barat",
+  "kabupaten": "Kota Bima",
+  "kecamatan": [
+    {"id":"KBM-ASA","nama":"Asakota"},
+    {"id":"KBM-MPU","nama":"Mpunda"},
+    {"id":"KBM-RAB","nama":"Raba"},
+    {"id":"KBM-RABAR","nama":"Rasanae Barat"},
+    {"id":"KBM-RATIM","nama":"Rasanae Timur"}
+  ]
+}
+]
