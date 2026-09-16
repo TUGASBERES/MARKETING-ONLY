@@ -127,55 +127,146 @@ button {
 // Data sementara
 // nanti diganti dengan datawilayah.json
 
-const wilayahNTB = [
-
-{
-kabupaten:"Kota Mataram",
-kecamatan:[
-"Ampenan",
-"Cakranegara",
-"Mataram",
-"Sandubaya",
-"Selaparang",
-"Sekarbela"
-]
-},
+let wilayahNTB = [];
 
 
-{
-kabupaten:"Lombok Barat",
-kecamatan:[
-"Batu Layar",
-"Gerung",
-"Gunungsari",
-"Kediri",
-"Kuripan",
-"Labuapi",
-"Lembar",
-"Lingsar",
-"Narmada",
-"Sekotong"
-]
-},
+// Membaca data dari JSON
+
+fetch("datawilayah.json")
+.then(response => response.json())
+.then(data => {
+
+    wilayahNTB = data;
+
+    tampilkanKabupaten();
+
+})
+.catch(error => {
+
+    console.error("Data wilayah gagal dimuat:", error);
+
+});
 
 
-{
-kabupaten:"Lombok Tengah",
-kecamatan:[
-"Batukliang",
-"Batukliang Utara",
-"Janapria",
-"Jonggat",
-"Kopang",
-"Praya",
-"Praya Barat",
-"Praya Tengah",
-"Praya Timur",
-"Pujut"
-]
+
+// Menampilkan Kabupaten/Kota
+
+function tampilkanKabupaten(){
+
+const container = document.getElementById("wilayahContainer");
+
+container.innerHTML="";
+
+
+wilayahNTB.forEach((wilayah,index)=>{
+
+
+let card=document.createElement("div");
+
+card.className="card";
+
+
+card.innerHTML=`
+
+<h3>${wilayah.kabupaten}</h3>
+
+<p>
+Jumlah Kecamatan :
+${wilayah.kecamatan.length}
+</p>
+
+<button>
+Lihat Kecamatan
+</button>
+
+`;
+
+
+card.onclick=function(){
+
+tampilkanDetail(index);
+
+};
+
+
+container.appendChild(card);
+
+
+});
+
+
 }
 
-];
+
+
+
+// Menampilkan Kecamatan
+
+function tampilkanDetail(index){
+
+
+let data=wilayahNTB[index];
+
+
+document.getElementById("detailWilayah").style.display="block";
+
+
+document.getElementById("namaKabupaten").innerHTML =
+data.kabupaten;
+
+
+
+let list=document.getElementById("listKecamatan");
+
+list.innerHTML="";
+
+
+
+data.kecamatan.forEach(kec=>{
+
+
+let item=document.createElement("div");
+
+
+item.className="kecamatan";
+
+
+item.innerHTML=`
+
+<strong>${kec.nama}</strong>
+
+<br>
+
+ID Wilayah:
+${kec.id}
+
+`;
+
+
+
+item.onclick=function(){
+
+alert(
+
+"Kecamatan : "
++kec.nama
++
+"\nKabupaten : "
++data.kabupaten
+
+);
+
+};
+
+
+list.appendChild(item);
+
+
+
+});
+
+
+}
 
 
 
