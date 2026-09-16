@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Data Wilayah NTB | Marketing Dashboard</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background:#f5f7fb;
+    margin:0;
+    padding:0;
+}
+
+.header {
+    background:#0d6efd;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.container {
+    padding:25px;
+}
+
+.card-container {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card {
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+    background:#eaf3ff;
+}
+
+.card h3 {
+    margin-top:0;
+    color:#0d6efd;
+}
+
+.detail {
+    margin-top:30px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    display:none;
+}
+
+.kecamatan {
+    background:#f8f9fa;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.kecamatan:hover {
+    background:#dbeafe;
+}
+
+button {
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h1>DATA WILAYAH NTB</h1>
+<p>Marketing Intelligence Dashboard</p>
+
+</div>
+
+
+<div class="container">
+
+
+<h2>Kabupaten / Kota</h2>
+
+
+<div id="wilayahContainer" class="card-container">
+
+<!-- Data Kabupaten muncul disini -->
+
+</div>
+
+
+<div id="detailWilayah" class="detail">
+
+<h2 id="namaKabupaten"></h2>
+
+<h3>Daftar Kecamatan</h3>
+
+<div id="listKecamatan"></div>
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+// Data sementara
+// nanti diganti dengan datawilayah.json
+
+const wilayahNTB = [
+
+{
+kabupaten:"Kota Mataram",
+kecamatan:[
+"Ampenan",
+"Cakranegara",
+"Mataram",
+"Sandubaya",
+"Selaparang",
+"Sekarbela"
+]
+},
+
+
+{
+kabupaten:"Lombok Barat",
+kecamatan:[
+"Batu Layar",
+"Gerung",
+"Gunungsari",
+"Kediri",
+"Kuripan",
+"Labuapi",
+"Lembar",
+"Lingsar",
+"Narmada",
+"Sekotong"
+]
+},
+
+
+{
+kabupaten:"Lombok Tengah",
+kecamatan:[
+"Batukliang",
+"Batukliang Utara",
+"Janapria",
+"Jonggat",
+"Kopang",
+"Praya",
+"Praya Barat",
+"Praya Tengah",
+"Praya Timur",
+"Pujut"
+]
+}
+
+];
+
+
+
+const container = document.getElementById("wilayahContainer");
+
+
+wilayahNTB.forEach((wilayah,index)=>{
+
+
+let card=document.createElement("div");
+
+card.className="card";
+
+
+card.innerHTML=`
+
+<h3>${wilayah.kabupaten}</h3>
+
+<p>
+Jumlah Kecamatan:
+${wilayah.kecamatan.length}
+</p>
+
+<button>
+Lihat Kecamatan
+</button>
+
+`;
+
+
+
+card.onclick=function(){
+
+tampilkanDetail(index);
+
+};
+
+
+container.appendChild(card);
+
+
+});
+
+
+
+
+function tampilkanDetail(index){
+
+
+let data=wilayahNTB[index];
+
+
+document.getElementById("detailWilayah").style.display="block";
+
+
+document.getElementById("namaKabupaten").innerHTML=
+data.kabupaten;
+
+
+
+let list=document.getElementById("listKecamatan");
+
+
+list.innerHTML="";
+
+
+data.kecamatan.forEach(kec=>{
+
+
+let item=document.createElement("div");
+
+item.className="kecamatan";
+
+
+item.innerHTML=
+
+`
+<strong>${kec}</strong>
+<br>
+Klik untuk melihat detail wilayah
+`;
+
+
+item.onclick=function(){
+
+alert(
+"Wilayah : "+kec+
+"\n\nTahap berikutnya akan terhubung dengan Data Hotel, Event, dan Customer."
+);
+
+};
+
+
+list.appendChild(item);
+
+
+});
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>
