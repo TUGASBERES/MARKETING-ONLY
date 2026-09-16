@@ -1,12 +1,21 @@
 [
   {
+    "id": 1,
     "hotel": "Novotel Lombok Resort",
-    "wilayah": "Lombok Tengah",
+    "pulau": "Lombok",
+    "kabupaten": "Lombok Tengah",
+    "kecamatan": "Pujut",
+    "desa": "Kuta",
     "kamar": 250
   },
+
   {
+    "id": 2,
     "hotel": "Kuta Paradiso Hotel",
-    "wilayah": "Lombok Tengah",
+    "pulau": "Lombok",
+    "kabupaten": "Lombok Tengah",
+    "kecamatan": "Pujut",
+    "desa": "Kuta",
     "kamar": 180
   }
 ]
