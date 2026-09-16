@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DPD IHSA NTB Database</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<aside>
+<h2>DPD IHSA NTB</h2>
+<p>Hospitality Database</p>
+<ul>
+<li>🏠 Dashboard</li>
+<li>🏨 Data Hotel</li>
+<li>📍 Data Wilayah</li>
+<li>🛏 Tipe Kamar</li>
+<li>💰 Harga Kamar</li>
+<li>👤 Owner & PIC</li>
+<li>📊 Statistik</li>
+</ul>
+</aside>
+
+<main>
+<header>
+<input placeholder="Cari hotel, wilayah, owner/PIC">
+<b>Admin</b>
+</header>
+
+<h1>Dashboard</h1>
+<p>Database Hotel NTB</p>
+
+<div class="cards">
+<div>Total Hotel<h2>524</h2></div>
+<div>Kabupaten/Kota<h2>10</h2></div>
+<div>Kecamatan<h2>117</h2></div>
+<div>Desa/Kelurahan<h2>826</h2></div>
+</div>
+
+<div class="panel">
+<h2>Pencarian Data Hotel</h2>
+<select><option>Lombok Tengah</option></select>
+<select><option>Pujut</option></select>
+<select><option>Kuta</option></select>
+<button>Cari</button>
+</div>
+
+<div class="grid">
+<div class="panel">
+<h2>Daftar Hotel</h2>
+<table>
+<tr><th>No</th><th>Hotel</th><th>Wilayah</th><th>Kamar</th></tr>
+<tr><td>1</td><td>Novotel Lombok Resort</td><td>Lombok Tengah</td><td>250</td></tr>
+<tr><td>2</td><td>Kuta Paradiso Hotel</td><td>Lombok Tengah</td><td>180</td></tr>
+</table>
+</div>
+
+<div class="panel map">
+<h2>Peta Lokasi</h2>
+<div class="mapbox">Google Maps NTB</div>
+</div>
+</div>
+
+<div class="bottom">
+<div class="panel">
+<h2>Hotel Terbaru</h2>
+<p>🏨 Novotel Lombok Resort</p>
+<p>🏨 Mandalika Resort</p>
+<p>🏨 Senggigi Beach Hotel</p>
+</div>
+
+<div class="panel">
+<h2>Update Harga Kamar</h2>
+<p>Deluxe Room<br><b>Rp 750.000</b></p>
+<p>Suite Room<br><b>Rp 1.500.000</b></p>
+</div>
+
+<div class="panel">
+<h2>Ringkasan Tipe Kamar</h2>
+<canvas id="roomChart"></canvas>
+</div>
+</div>
+
+<div class="cards bottomstat">
+<div>Total Kamar<h2>2486</h2></div>
+<div>Rata-rata Kamar/Hotel<h2>4.7</h2></div>
+<div>Harga Rata-rata<h2>850K</h2></div>
+</div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
