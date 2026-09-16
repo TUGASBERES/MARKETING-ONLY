@@ -18,3 +18,30 @@ button{background:#1976d2;color:white;border:0}
 .mapbox{height:250px;background:#e8eef5;display:flex;align-items:center;justify-content:center}
 .bottomstat{grid-template-columns:repeat(3,1fr)}
 @media(max-width:900px){aside{display:none}.cards,.grid,.bottom{grid-template-columns:1fr}}
+aside ul{
+    list-style:none;
+    padding:0;
+}
+
+
+aside ul li{
+    margin:10px 0;
+}
+
+
+aside ul li a{
+
+    display:block;
+    padding:12px;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+
+}
+
+
+aside ul li a:hover{
+
+    background:#ffffff33;
+
+}
